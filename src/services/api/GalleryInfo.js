@@ -10,6 +10,7 @@ export default {
       return response.data.records.filter(record => {
         return record.theme && record.labeltext
       })
+      .sort((a, b) => a.floor - b.floor)
     })
   }
 }

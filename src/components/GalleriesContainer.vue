@@ -1,17 +1,26 @@
 <template>
-  <div class="gc">
+  <div class="gallery-container">
     <h1>{{ msg }}</h1>
     <p>
-      Please choose a gallery.
+      Click on a gallery to see its art.
     </p>
+    <ul class='gallery-list'>
+      <li v-for='gallery in galleries' :key='gallery.id'>
+        <GalleryCard :gallery='gallery'/>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
   import GalleryInfo from '../services/api/GalleryInfo'
+  import GalleryCard from  './GalleryCard.vue'
 
   export default {
     name: 'GalleriesContainer',
+    components: {
+      GalleryCard
+    },
     props: {
       msg: String
     },
@@ -43,18 +52,13 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  h3 {
-    margin: 40px 0 0;
-  }
   ul {
     list-style-type: none;
     padding: 0;
+    margin-top: 50px;
   }
   li {
     display: inline-block;
     margin: 0 10px;
-  }
-  a {
-    color: #42b983;
   }
 </style>
