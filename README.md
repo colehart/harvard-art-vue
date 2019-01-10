@@ -1,4 +1,7 @@
-# harvard-art-vue
+# Harvard Art View
+
+## A single page application in [Vue.js](https://vuejs.org/) that functions as an art gallery using the [Harvard Museums API](https://www.harvardartmuseums.org/collections/api). Use the API to present items from the Harvard Museums collection.
+
 
 ## Project setup
 ```
