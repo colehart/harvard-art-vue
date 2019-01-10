@@ -8,7 +8,7 @@
       <p>{{ art.technique }}</p>
       <p class='ac-description'>{{ art.description }}</p>
 
-      <p><a :href='art.link'>Visit this work at the Harvard Museum</a></p>
+      <p><a :href='art.link' target="_blank" rel="noopener">Visit this work at the Harvard Museum</a></p>
     </div>
   </div>
 </template>
